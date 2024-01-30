@@ -1,4 +1,4 @@
-package Operaters;
+package methodoverloading;
 
 public class Operaters {
 
@@ -7,9 +7,10 @@ public class Operaters {
         System.out.println(FirstNumber + secondNumber);
     }
 
-    public void add(int FirstNumber, double secondNumber) {
-        System.out.print(FirstNumber + " + " + secondNumber + " = ");
-        System.out.println((double) (FirstNumber) + secondNumber);
+    public double add(int FirstNumber, double secondNumber) {
+//        System.out.print(FirstNumber + " + " + secondNumber + " = ");
+//        System.out.println((double) (FirstNumber) + secondNumber);
+        return (double)FirstNumber + secondNumber;
     }
 
     public void add(double FirstNumber, double secondNumber) {

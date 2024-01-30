@@ -1,4 +1,4 @@
-package OopsDrawable;
+package methodOverriding;
 
 public class Square implements Drawable{
         private double side;

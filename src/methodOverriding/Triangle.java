@@ -1,4 +1,4 @@
-package OopsDrawable;
+package methodOverriding;
 
 class Triangle implements Drawable {
     private double base;

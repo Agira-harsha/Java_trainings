@@ -21,7 +21,7 @@ public class Square extends Shape{
 
     @Override
     public void CalculatArea() {
-        area=side*side;
+        area = side * side;
     }
 
 }

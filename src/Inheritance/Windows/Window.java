@@ -1,6 +1,6 @@
 package Inheritance.Windows;
 
-class Window {
+class Window  implements  OperatingSystem{
     private String WindowName;
     private int width;
     private int height;
