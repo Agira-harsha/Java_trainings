@@ -23,7 +23,7 @@ public class AutoBoxing {
     Float wrappedFloat = primitiveFloat; // Autoboxing
 
 
-    public void autoBoxing_display(){
+    public void autoBoxingDisplay(){
         System.out.println("Autoboxing.....Primitive  to Wrapper Classes:\n ");
         System.out.println("wrappedInt: " + wrappedInt);
         System.out.println("wrappedDouble: " + wrappedDouble);

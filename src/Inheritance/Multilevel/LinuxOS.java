@@ -1,4 +1,4 @@
-package Inheritance.Windows;
+package Inheritance.Multilevel;
 
 public class LinuxOS implements  OperatingSystem {
     private String LinuxName;

@@ -1,4 +1,6 @@
-package Inheritance;
+package Inheritance.hierachical;
+
+import Inheritance.hierachical.Animal;
 
 class Dog extends Animal {
     public Dog(String name) {

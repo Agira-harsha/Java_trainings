@@ -1,4 +1,4 @@
-package Inheritance.Windows;
+package Inheritance.Multilevel;
 
 class Window  implements  OperatingSystem{
     private String WindowName;
@@ -31,11 +31,11 @@ class Window  implements  OperatingSystem{
         System.out.println("Window Size: " + width + " x " + height);
     }
     public void start() {
-        System.out.println("Starting Windows...");
+        System.out.println("Starting Multilevel...");
     }
 
     public void shutDown() {
-        System.out.println("Shutting down Windows..."+"\n");
+        System.out.println("Shutting down Multilevel..."+"\n");
     }
 
     public void update() {

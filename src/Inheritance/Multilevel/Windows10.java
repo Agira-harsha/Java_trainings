@@ -1,4 +1,4 @@
-package Inheritance.Windows;
+package Inheritance.Multilevel;
 
 public class Windows10 extends Window{
 
@@ -27,6 +27,7 @@ public class Windows10 extends Window{
     public void setColor(String color) {
         this.color = color;
     }
+    //special feacture for window10
     public void assistant(){
         System.out.println( "Microsoft's voice assistant Started !! try to speak and lunch Applications");
     }
