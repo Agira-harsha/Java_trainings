@@ -1,4 +1,4 @@
-package assignment;
+package shoppingMallProject;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;

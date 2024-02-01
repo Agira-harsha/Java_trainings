@@ -1,4 +1,4 @@
-package assignment;
+package shoppingMallProject;
 
 public class InvalidGstNumber extends Exception{
     @Override

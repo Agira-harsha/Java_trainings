@@ -1,4 +1,4 @@
-package assignment;
+package shoppingMallProject;
 public class ShoppingMall {
     public static void main(String[] args) {
         CustomerInfo customerInfo = new CustomerInfo();
@@ -7,7 +7,6 @@ public class ShoppingMall {
         customerInfo.displayCustomerDetails();
         customerInfo.acceptProductDetails();
         customerInfo.calculation();
-
 
     }
 }
