@@ -1,6 +1,5 @@
 package ReaderAndWriter;
 
-import javax.sound.midi.Soundbank;
 import java.io.*;
 import java.util.HashMap;
 import java.util.InputMismatchException;
@@ -10,7 +9,7 @@ import java.util.Scanner;
 public class CityLocations {
 
     private static final String FILE_PATH = "data.txt";
-    private static  Map<String,String> dataMap = new HashMap<>();
+    private static Map<String, String> dataMap = new HashMap<>();
 
     public void loadFromFile() throws IOException {
         try (BufferedReader reader = new BufferedReader(new FileReader(FILE_PATH))) {
@@ -19,32 +18,27 @@ public class CityLocations {
                 String[] parts = line.split(":");
                 if (parts.length == 2) {
                     dataMap.put(parts[0], parts[1]);
-                }
-                else{
+                } else {
                     System.out.println("Data not found :");
                 }
             }
-        }
-        catch (FileNotFoundException e){
+        } catch (FileNotFoundException e) {
             System.out.println(e.getMessage());
-        }
-        catch (IOException e) {
+        } catch (IOException e) {
 
             System.err.println("Error loading data from file: " + e.getMessage());
         }
     }
 
-     static void saveToFile() throws IOException {
+    static void saveToFile() throws IOException {
         try (FileWriter writer = new FileWriter(FILE_PATH, false)) {
             for (Map.Entry<String, String> entry : dataMap.entrySet()) {
                 writer.write(entry.getKey() + ":" + entry.getValue() + "\n");
                 writer.flush();
             }
-        }
-        catch (FileNotFoundException e){
+        } catch (FileNotFoundException e) {
             System.out.println(e.getMessage());
-        }
-        catch (IOException e) {
+        } catch (IOException e) {
 
             System.err.println("Error saving data to file: " + e.getMessage());
         }
@@ -94,29 +88,29 @@ public class CityLocations {
             System.out.println("city : " + entry.getKey() + " : value " + entry.getValue());
         }
     }
+
     public void acceptInput() throws IOException {
         BufferedReader reader = null;
-        try{
+        try {
             reader = new BufferedReader(new InputStreamReader(System.in));
             System.out.println("enter city :");
             String key = reader.readLine();
             System.out.println("enter value:");
-            String value= reader.readLine();
-            if(key.matches("^[a-zA-Z]*$")){
-                put(key,value);
-            }
-            else{
+            String value = reader.readLine();
+            if (key.matches("^[a-zA-Z]*$")) {
+                put(key, value);
+            } else {
                 System.err.println("don't enter specail symobls");
             }
 
-        }
-        catch (IOException e){
+        } catch (IOException e) {
             System.err.println(e.getMessage());
             throw e;
         }
 
     }
-    public  void operations(){
+
+    public void operations() {
         while (true) {
             System.out.println("1.loadTheCitysFromFile");
             System.out.println("2. View Citys and address");
@@ -132,7 +126,6 @@ public class CityLocations {
             } catch (InputMismatchException e) {
                 System.err.println("please enter numeric values !!");
             }
-//            scanner.nextLine(); // Consume newline character
 
             switch (choice) {
                 case 1:
@@ -150,28 +143,26 @@ public class CityLocations {
                 case 3:
                     System.out.println("enter city name:");
                     String key;
-                    String value = get(key=new Scanner(System.in).nextLine());
-                    System.out.println("city :"+key +"\nvalue :"+value);
+                    String value = get(key = new Scanner(System.in).nextLine());
+                    System.out.println("city :" + key + "\nvalue :" + value);
                     break;
                 case 4:
                     try {
                         acceptInput();
-                    }
-                    catch (IOException e) {
+                    } catch (IOException e) {
                         System.err.println(e.getMessage());
                     }
                     break;
                 case 5:
+                    System.out.println("enter city :");
                     remove(new Scanner(System.in).nextLine());
                     break;
                 case 6:
                     try {
                         saveToFile();
-                    }
-                    catch (FileNotFoundException e){
+                    } catch (FileNotFoundException e) {
                         System.err.println(e.getMessage());
-                    }
-                    catch (IOException e) {
+                    } catch (IOException e) {
                         System.out.println(e.getMessage());
                     }
                     System.out.println("data saved and Updated");

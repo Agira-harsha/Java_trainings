@@ -14,6 +14,7 @@ public class BuffredWriterExample {
             bufferedWriter.write("chennai" + ":" + "232-222-232\n");
             bufferedWriter.write("banglore" + ":" + "232-212-232\n");
             bufferedWriter.write("assam" + ":" + "232-272-232\n");
+            bufferedWriter.append("bihar"+":"+"233-222-222\n");
 
             bufferedWriter.flush();
 

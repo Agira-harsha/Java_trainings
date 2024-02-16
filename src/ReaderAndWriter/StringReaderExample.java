@@ -5,7 +5,7 @@ import java.io.FileReader;
 import java.io.StringReader;
 import java.io.IOException;
 
-public class StringReaderExample {
+public class    StringReaderExample {
     public static void main(String[] args) {
         String text = "Hello, this is harsha kohli";
 
