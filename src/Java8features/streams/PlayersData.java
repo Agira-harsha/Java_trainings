@@ -5,7 +5,7 @@ import java.util.List;
 
 public class PlayersData {
 
-    static List<Player> india(){
+    static List<Player> india() {
         return Arrays.asList(
                 new Player("viratkohli", 39),
                 new Player("rohitSharma", 40),
@@ -14,16 +14,19 @@ public class PlayersData {
                 new Player("siraj", 26)
         );
     }
-    static List<Player> usa(){
+
+    static List<Player> usa() {
         return Arrays.asList(
                 new Player("deviller", 39),
                 new Player("warner", 30),
                 new Player("smith", 21),
                 new Player("fench", 27),
+                new Player("zampa", 40),
                 new Player("zampa", 36)
         );
     }
-    static  List<Player>south(){
+
+    static List<Player> south() {
         return Arrays.asList(
                 new Player("Kagiso Rabada", 30),
                 new Player("faf ", 43),
